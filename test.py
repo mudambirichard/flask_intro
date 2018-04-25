@@ -35,7 +35,10 @@ class FlaskTestCase(unittest.TestCase):
     	    response = tester.get('/register', content_type='html/text')
     	    self.assertTrue(b'Please register' in response.data)
 
-    		
+    	def test_post_page_loads(self):
+    	    tester = app.test_client(self)
+    	    response = tester.get('/post', content_type='html/text')
+    	    self.assertFalse(b'Please post' in response.data)	
     		
     	
 
