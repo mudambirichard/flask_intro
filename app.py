@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-	return "Hello, Andela"
+	return " Kisumu Hotel"
 
 	
 @app.route('/welcome')
