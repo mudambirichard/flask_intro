@@ -22,7 +22,7 @@ def login():
 			error = 'Invalid credentials. Please try again.'
 		else:
 			
-			return redirect(url_for('home'))
+			return redirect(url_for('login.html'))
 	return render_template('login.html', error=error)
 
 
@@ -30,12 +30,18 @@ def login():
 def register():
 	error = None
 	if request.method == 'POST':
-		
-			
-			return redirect(url_for('home'))
+
+	    return redirect(url_for('home'))
 	return render_template('register.html', error=error)
 
 
+@app.route('/post', methods=['GET', 'POST'])
+def post():
+	error = None
+	if request.method == 'POST':
+		
+	    return redirect('post.html')
+	return render_template('post.html', error=error)
 
 if __name__ == '__main__':
 	app.run(debug=True)
