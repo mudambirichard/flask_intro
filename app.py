@@ -40,7 +40,7 @@ def post():
 	error = None
 	if request.method == 'POST':
 		
-	    return redirect('post.html')
+	    return redirect(url_for('home'))
 	return render_template('post.html', error=error)
 
 if __name__ == '__main__':
