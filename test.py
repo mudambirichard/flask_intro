@@ -25,7 +25,7 @@ class FlaskTestCase(unittest.TestCase):
     		tester = app.test_client(self)
     		response = tester.post(
     			'/login',
-    			data=dict(username="wrong", password="wrong"),
+    			data=dict(username="wrong",  password="wrong"),
     			)
     		self.assertIn(b'Invalid credentials. Please try again.', response.data)
 
@@ -49,6 +49,11 @@ class FlaskTestCase(unittest.TestCase):
             tester = app.test_client(self)
             response = tester.get('/post', content_type='html/text')
             self.assertFalse(b'Please get' in response.data)
+
+         def test_put_page_loads(self):
+            tester = app.test_client(self)
+            response = tester.put('/post', content_type='html/text')
+            self.assertFalse(b'Please put ' in response.data)
 
 if __name__ == '__main__':
 	unittest.main()
