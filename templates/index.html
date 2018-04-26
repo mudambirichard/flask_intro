@@ -1,0 +1,21 @@
+<doctype html>
+
+<html>
+<head>
+	<title>Flask</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+ <div class="container">
+ <h1>Welcome to Andela</h1>
+ <br>
+ <p>Click <a href="/logout"> here </a> to logout.</p>
+ {% for message in get_flashed_message() %}
+  {{ message }}
+  {% endfor %}
+ 	
+ </div>
+
+</body>
+</html>

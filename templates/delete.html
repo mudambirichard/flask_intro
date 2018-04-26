@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+	<title>Delete</title>
+	<link name="viewport" content="widith=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+<h2>Delete Meal</h2>
+
+<form>
+<label for="title">Title</label>
+<input type="text" name="title" placeholder="Your title"><br><br>
+<label for="price">Price</label>
+<input type="number" name="price" placeholder="Your price"><br><br>
+<label for="description">Description</label>
+ <textarea id="description" name="description" placeholder="Write something.." style="height:200px; width: 100%;"></textarea>
+ <label for="text">Delete meal</label><br><br>
+ <input type="close" value="Delete">
+
+</form>
+   {% if error %}
+ <p class="error"><strong>Error</strong>{{error}}</p>
+ {% endif %}
+	
+</div>
+
+</body>
+</html>
