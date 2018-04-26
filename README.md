@@ -18,3 +18,9 @@ Press new pull request,
 Create pull requst,
 Merge pull request,
 Then confirm.
+
+## Invite fellows to view my work.
+Go to settings.
+Select collaborators.
+Then type in the name 
+Invite .
