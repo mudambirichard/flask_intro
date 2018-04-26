@@ -1,12 +1,12 @@
 <!doctype html>
-<!DOCTYPE html>
 <html>
 <head>
-	<title>Post</title>
+	<title>Delete</title>
+	<link name="viewport" content="widith=device-width, initial-scale=1.0">
 </head>
 <body>
 <div class="container">
-<p>Post meal</p>
+<h2>Delete Meal</h2>
 
 <form>
 <label for="title">Title</label>
@@ -15,27 +15,15 @@
 <input type="number" name="price" placeholder="Your price"><br><br>
 <label for="description">Description</label>
  <textarea id="description" name="description" placeholder="Write something.." style="height:200px; width: 100%;"></textarea>
- <label for="text">Meal photo</label><br><br>
- <input type="file" value="post">
+ <label for="text">Delete meal</label><br><br>
+ <input type="close" value="Delete">
 
 </form>
    {% if error %}
  <p class="error"><strong>Error</strong>{{error}}</p>
  {% endif %}
-	 
+	
 </div>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
