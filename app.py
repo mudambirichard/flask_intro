@@ -18,7 +18,7 @@ def welcome():
 def login():
 	error = None
 	if request.method == 'POST':
-		if request.form['username'] != 'admin' or request.form['password'] != 'admin':
+		if request.form['username'] != 'admin'  or  request.form['password'] != 'admin':
 			error = 'Invalid credentials. Please try again.'
 		else:
 			
@@ -59,6 +59,14 @@ def get():
 		
 	    return redirect(url_for('home'))
 	return render_template('get.html', error=error)
+
+@app.route('/put', methods=['GET', 'POST'])
+def put():
+	error = None
+	if request.method == 'POST':
+		
+	    return redirect(url_for('home'))
+	return render_template('put.html', error=error)
 
 if __name__ == '__main__':
 	app.run(debug=True)
