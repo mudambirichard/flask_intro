@@ -43,5 +43,22 @@ def post():
 	    return redirect(url_for('home'))
 	return render_template('post.html', error=error)
 
+@app.route('/delete', methods=['GET', 'POST'])
+def delete():
+	error = None
+	if request.method == 'POST':
+		
+	    return redirect(url_for('home'))
+	return render_template('delete.html', error=error)
+
+
+@app.route('/get', methods=['GET', 'POST'])
+def get():
+	error = None
+	if request.method == 'POST':
+		
+	    return redirect(url_for('home'))
+	return render_template('get.html', error=error)
+
 if __name__ == '__main__':
 	app.run(debug=True)

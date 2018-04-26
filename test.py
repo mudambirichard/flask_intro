@@ -40,7 +40,15 @@ class FlaskTestCase(unittest.TestCase):
     	    response = tester.get('/post', content_type='html/text')
     	    self.assertFalse(b'Please post' in response.data)	
     		
-    	
+    	def test_delete_page_loads(self):
+            tester = app.test_client(self)
+            response = tester.get('/post', content_type='html/text')
+            self.assertFalse(b'Please delete' in response.data)
+
+        def test_get_page_loads(self):
+            tester = app.test_client(self)
+            response = tester.get('/post', content_type='html/text')
+            self.assertFalse(b'Please get' in response.data)
 
 if __name__ == '__main__':
 	unittest.main()

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<title>Get</title>
+	<link name="viewport" content="widith=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="container">
+<h2>Get meals</h2>
+ <form action="action_page.php">
+  <label for="title">Title</label><br><br>
+  <select>
+  	<option value="Rice and Meat">Rice and Meat</option>
+  	<option value="Rice and  Fish">Rice and Fish</option>
+  	<option value="cassava and Meat">cassava and Meat</option>
+  	<option value="Posho and Beans">Posho and Beans</option>
+  	<option value="Banana and Meat">Banana and Meat</option>
+  </select><br><br>
+
+  <label for="price">Price</label><br>
+
+  <input type="name" id="price" name="price" placeholder="Your price"><br>
+  <label for="description">Description</label><br><br>
+  <textarea id="description" name="description" placeholder="Write something here" style="height: 200px;
+  width: 100%;"></textarea><br><br>
+
+  <label for="text">Meal photo</label><br>
+  <input type="file" name="" value="get">
+ 	
+ </form>
+ {% if error %}
+ <p class="error"><strong>Error</strong>{{error}}</p>
+ {% endif %}
+
+
+	
+</div>
+
+</body>
+</html>
+
+
+
+    
+
+
+
+
+
