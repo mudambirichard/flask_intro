@@ -50,7 +50,7 @@ class FlaskTestCase(unittest.TestCase):
             response = tester.get('/post', content_type='html/text')
             self.assertFalse(b'Please get' in response.data)
 
-         def test_put_page_loads(self):
+        def test_put_page_loads(self):
             tester = app.test_client(self)
             response = tester.put('/post', content_type='html/text')
             self.assertFalse(b'Please put ' in response.data)
