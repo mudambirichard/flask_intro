@@ -1,10 +1,7 @@
-<!doctype html>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Post</title>
-</head>
-<body>
+
+{% extends 'layout.html' %}
+
+{% block body %}
 <div class="container">
 <p>Post meal</p>
 
@@ -22,11 +19,9 @@
    {% if error %}
  <p class="error"><strong>Error</strong>{{error}}</p>
  {% endif %}
+ {% endblock %}
 	 
-</div>
 
-</body>
-</html>
 
 
 

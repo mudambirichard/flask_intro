@@ -3,7 +3,7 @@ import unittest
 
 class FlaskTestCase(unittest.TestCase):
 
-	def test_index(self):
+	def test_home(self):
 		tester = app.test_client(self)
 		response = tester.get('/api/v1/auth/login', content_type='html/text')
 		self.assertEqual(response.status_code, 200)
